@@ -1,0 +1,12 @@
+<div class="nav-bar">
+  <button [class.active]="view === 'all'" (click)="setView('all')">Pokémon</button>
+  <button [class.active]="view === 'search'" (click)="setView('search')">Pokedex</button>
+</div>
+
+<div *ngIf="view === 'search'">
+  <app-pokemon-card></app-pokemon-card>
+</div>
+
+<div *ngIf="view === 'all'">
+  <app-pokedex></app-pokedex>
+</div>

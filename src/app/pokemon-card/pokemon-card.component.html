@@ -1,0 +1,32 @@
+<div class="search-bar">
+    <input [(ngModel)]="pokemonName" placeholder="Search Pokémon" />
+    <button (click)="searchPokemon()">Search</button>
+  </div>
+  
+  <div class="pokemon-card-container" *ngIf="pokemon">
+    <div class="pokemon-card" [ngStyle]="{'--circle-color': getTypeColor(pokemon.types[0].type.name)}">
+      <div class="card-header">
+        <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" />
+        <div class="hp">HP {{ pokemon.stats[0].base_stat }}</div>
+      </div>
+      <div class="card-body">
+        <h2>{{ pokemon.name }}</h2>
+        <div class="type">{{ pokemon.types[0].type.name }}</div>
+      </div>
+      <div class="stats">
+        <div>
+          <strong>{{ pokemon.stats[1].base_stat }}</strong>
+          <span>Ataque</span>
+        </div>
+        <div>
+          <strong>{{ pokemon.stats[2].base_stat }}</strong>
+          <span>Defensa</span>
+        </div>
+        <div>
+          <strong>{{ pokemon.stats[5].base_stat }}</strong>
+          <span>Velocidad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  

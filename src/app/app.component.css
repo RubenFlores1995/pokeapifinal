@@ -1,0 +1,29 @@
+/* Navegación superior */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    background-color: #ff0000;  /* Fondo rojo para la barra de navegación */
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-bar button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #0000ff;  /* Fondo azul para los botones */
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;  /* Transición suave para el hover */
+  }
+  
+  .nav-bar button.active {
+    background-color: #000080;  /* Color azul oscuro para el botón activo */
+  }
+  
+  .nav-bar button:hover {
+    background-color: #1a1aff;  /* Color azul claro para el hover */
+  }
+  
